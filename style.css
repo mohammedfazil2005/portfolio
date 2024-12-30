@@ -4,17 +4,39 @@
     font-family: outfit;
    
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    touch-action: manipulation; 
+    -ms-touch-action: manipulation; 
+  }
 nav{
     background: transparent;
+    background-color: rgba(245, 245, 245, 0.712);
+    box-shadow: 0px 0px 5px -3px;
+  
 }
-nav p{
+nav a{
+    text-decoration: none;
+}
+nav a p{
+    color: #212747;
     margin: 0px 20px;
+    cursor: pointer;
+    transition: 1s;
+    text-transform: uppercase;
+}
+nav p:hover{
+    transform: scale(1.1);
 }
 
 .heading-parent{
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    margin: 70px;
     margin-top: 100px;
     
 }
@@ -45,8 +67,13 @@ nav p{
     
 }
 .heading-child-left div i{
-    margin: 10px 10px;
-   font-size: 24px;
+    margin: 10px 20px;
+   font-size: 26px;
+   color: #212747;
+   transition: 1s;
+}
+.heading-child-left div i:hover{
+    transform: scale(1.1);
 }
 .heading-child-left div button{
     margin: 10px 10px;
@@ -57,7 +84,9 @@ nav p{
     color: white;
     width: 150px;
 }
-
+.heading-child-left div button:hover{
+    background: #212747bb;
+}
 .heading-child-right img{
     width: 100%;
 }
@@ -95,6 +124,9 @@ nav p{
     color: white;
     width: 150px;
 } 
+.about-section-right button:hover{
+    background: #212747bb;
+}
 .services{
     display: flex;
     justify-content: center;
@@ -144,7 +176,7 @@ nav p{
     height: 100px;
     padding: 15px;
     border-radius: 4px;
-    box-shadow: 0px 0px 6px -1px #212747;
+    box-shadow: 0px 0px 6px -2px;
    
 }
 
@@ -229,7 +261,8 @@ nav p{
     margin: 10px 50px;
     display: flex;
     gap: 20px;
-    padding: 20px;
+    width: 380px;
+    padding: 30px;
     cursor: pointer;
     transition: 0.5s;
     box-shadow: 0px 0px 10px -5px #212747;
@@ -271,6 +304,85 @@ nav p{
     color: green;
 }
 
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 80px;
+}
+.contact-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-heading div h1{
+    font-weight: bolder;
+    color: #212747;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.contact-heading div button{
+    border: none;
+    padding: 10px 17px;
+    border-radius: 10px;
+    background: #212747;
+    color: white;
+}
+#contact-me{
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #212747;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form div {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+}
+
+.contact-form div input,.contact-form div textarea{
+    padding: 10px;
+    width: 100%;
+    
+    outline: none;
+    border: none;
+    border: 1px solid #2127477c;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#send-message{
+    border: none;
+    padding: 6px 13px;
+    border-radius: 10px;
+    background: #212747a0;
+    color: white;
+}
+#send-message:hover{
+    background-color: #212747;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    margin-top: 40px;
+}
+footer div{
+    display: flex;
+    gap: 20px;
+}
+footer div i{
+    font-size: 20px;
+}
+
 @media screen and (max-width:1275px) {
     .projects-child-div{
         margin: 20px;
@@ -282,6 +394,12 @@ nav p{
     .projects-child-div{
         margin: 0px;
     }
+    .contact-heading div h1{
+        font-weight: bolder;
+        color: #212747;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
     
 }
 
@@ -292,39 +410,48 @@ nav p{
     .projects-child-div{
         margin: 10px;
     }
-    
+    .about-section div img{
+        width: 300px;
+        margin-left: 10px;
+    }
 }
 
 
 
 @media screen and (max-width:694px) {
+    .projects-parents{
+        flex-direction: column;
+        margin: 20px;
+    }
     .projects-child-div{
         display: flex;
         gap: 40px;
-        padding: 40px;
+        padding: 20px;
         cursor: pointer;
         transition: 0.5s;
-       
+       width: 100%;
+       margin: 6px 10px;
     }
     .projects-child-div div img{
         width: 80px;
     }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     
 }
 
-@keyframes service-box-i-tag{
-    to{
-        transform: translateY(-10px);
-    }
-    from{
-        transform: translateY(10px);
-    }
-}
+
 
 @media screen and (max-width:1077px) {
     .heading-parent{
         flex-direction: column-reverse;
         margin: 0px;
+    }
+    .heading-child-right img{
+        z-index: 1;
     }
     .heading-child-right{
         margin-top: -100px;
@@ -344,16 +471,26 @@ nav p{
     }
     .about-section{
         margin: 10px;
+        margin-top: 60px;
+    }
+    .about-section div button{
+        width: 300px;
     }
 }
 
 
 @media screen and (max-width:1113px) {
+    .services{
+        margin-top: 70px;
+    }
     .services-box-parent-row{
      flex-direction: column;
     }
+    .skills-progress-bar div{
+        height: 10px;
+    }
     .skills{
-        margin: 10px;
+        margin: 20px;
     
     }
 }
@@ -384,12 +521,7 @@ nav p{
 }
 
 
-@media screen and (max-width:476px) {
-    .services h2{
-        font-size: 30px;
-    }
 
-}
 
 
 @media screen and (max-width:564px) {
@@ -400,4 +532,60 @@ nav p{
         width: 100%;
     }
 
+}
+
+@media screen and (max-width:880px) {
+    .contact{
+        margin: 10px 20px;
+    }
+   .contact-heading{
+    flex-direction: column;
+   }
+   .contact-heading button{
+    width: 200px;
+    float: right;
+   }
+    .contact-form div {
+        flex-direction: column;
+    }
+    #contact-me{
+        text-align: center;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:633px) {
+    .contact-heading div h1{
+        font-size: 23px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    .contact-heading div button{
+        display: none;
+    }
+    .skills-progress-bar div{
+        height: 12px;
+    }
+}
+
+@media screen and (max-width:476px) {
+    .services h2{
+        font-size: 30px;
+    }
+    .contact-heading div h1{
+        font-size: 20px;
+    }
+
+}
+
+@keyframes service-box-i-tag{
+    to{
+        transform: translateY(-10px);
+    }
+    from{
+        transform: translateY(10px);
+    }
 }
