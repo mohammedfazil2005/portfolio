@@ -8,6 +8,10 @@ a{
     color: inherit;
     text-decoration: none;
 }
+p{
+    margin: 0;
+    padding: 0
+}
 
 body {
     touch-action: manipulation; 
@@ -67,7 +71,7 @@ nav p:hover{
     
 }
 .heading-child-left div i{
-    margin: 10px 20px;
+    margin: 10px 10px;
    font-size: 26px;
    color: #212747;
    transition: 1s;
@@ -304,84 +308,129 @@ nav p:hover{
     color: green;
 }
 
-.contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0px 80px;
-}
-.contact-heading{
-    display: flex;
-    justify-content: space-between;
-}
-.contact-heading div h1{
-    font-weight: bolder;
-    color: #212747;
-    font-size: 40px;
-    letter-spacing: 2px;
-}
-
-.contact-heading div button{
-    border: none;
-    padding: 10px 17px;
-    border-radius: 10px;
-    background: #212747;
-    color: white;
-}
-#contact-me{
+/* #contact-me{
     font-weight: bold;
     letter-spacing: 2px;
     color: #212747;
     margin-left: 20px;
     margin-top: 10px;
     text-transform: uppercase;
-}
+} */
 
 .contact-form{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 30px;
 }
-.contact-form div {
+#get-started{
+    font-weight: bolder;
+    color: #212747;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-details-service{
     display: flex;
-    gap: 30px;
-    padding: 10px;
-}
-
-.contact-form div input,.contact-form div textarea{
-    padding: 10px;
-    width: 100%;
+    flex-direction: column;
+    width: 600px;
     
-    outline: none;
-    border: none;
-    border: 1px solid #2127477c;
-    border-radius: 3px;
-    cursor: pointer;
 }
 
-#send-message{
+.contact-details-service h1{
+    font-weight: bolder;
+    color: #212747;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+.contact-details-service p{
+    color: #212747;
+}
+.contact-details-service span{
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contact-details-service div p{
+    margin-top: -10px
+}
+
+.contact-details-service div p i{
+    margin-right: 10px
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 700px;
+}
+.contact-form form h1{
+    font-weight: bold;
+    color: #212747;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 14px;
+    margin-bottom: 20px;
+}
+.contact-form form div{
+    display: flex;
+    gap: 3px;
+}
+
+.contact-form form input,.contact-form form textarea{
+    width: 100%;
+    padding: 3px;
+    outline: none;
+    box-shadow: 0px 0px 4px -2px;
     border: none;
-    padding: 6px 13px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+}
+
+.contact-form button{
+    border: none;
+    padding: 4px 13px;
     border-radius: 10px;
     background: #212747a0;
     color: white;
 }
-#send-message:hover{
-    background-color: #212747;
+
+.contact-form button:hover{
+    border: none;
+    padding: 4px 13px;
+    border-radius: 10px;
+    background: #212747;
+    color: white;
 }
+
 
 footer{
     display: flex;
     justify-content: space-between;
     padding: 3px;
-    margin-top: 40px;
+  
+    margin: 10px 80px;
 }
 footer div{
     display: flex;
     gap: 20px;
+
 }
 footer div i{
     font-size: 20px;
 }
+
+@media screen and (max-width:1388px) {
+   .contact-form form{
+    width: 100%;
+   }
+}
+
+
 
 @media screen and (max-width:1275px) {
     .projects-child-div{
@@ -413,6 +462,18 @@ footer div i{
     .about-section div img{
         width: 300px;
         margin-left: 10px;
+    }
+    .contact-details-service{
+     width: 100%;   
+    }
+    .contact-details-service h1{
+        text-align: center;
+        font-weight: bolder;
+        color: #212747;
+        text-shadow: 0px 0px 2px;
+    }
+    .contact-form{
+        flex-direction: column;
     }
 }
 
@@ -576,6 +637,19 @@ footer div i{
         font-size: 30px;
     }
     .contact-heading div h1{
+        font-size: 20px;
+    }
+    .contact{
+       justify-content: center;
+    }
+    #get-started{
+        font-size: 30px;
+    }
+
+    .contact-details-service h1{
+        text-align: center;
+        font-weight: bolder;
+        color: #212747;
         font-size: 20px;
     }
 
