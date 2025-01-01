@@ -22,6 +22,7 @@ nav{
     background-color: rgba(245, 245, 245, 0.712);
     box-shadow: 0px 0px 5px -3px;
   
+  
 }
 nav a{
     text-decoration: none;
@@ -34,7 +35,7 @@ nav a p{
     text-transform: uppercase;
 }
 nav p:hover{
-    transform: scale(1.1);
+    border-bottom: 1px solid #212747;
 }
 
 .heading-parent{
@@ -55,21 +56,64 @@ nav p:hover{
 .heading-child-left h6{
     font-weight: 300;
     letter-spacing: 5px;
+    margin-top: -700px;
+    animation-name: h1-animation;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .heading-child-left h3{
     font-weight: 300;
     text-transform: uppercase;
-    
+    margin-top: -700px;
+    animation-name: h1-animation;
+    animation-delay: 0.7s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     letter-spacing: 10px;
+    
 }
 .heading-child-left h1{
     font-weight: 300;
     text-transform: uppercase;
    margin: 3px 0px;
-    letter-spacing: 1px;
-    font-weight: bold;
+   font-weight: bolder;
+   color: #212747;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   letter-spacing: 10px;
+   font-size: 30px;
+    margin-top: -700px;
+    animation-name: h1-animation;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     
 }
+.social-media-link{
+    margin-top: -700px;
+    animation-name: h1-animation;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.hire-cv{
+    margin-top: -700px;
+    animation-name: h1-animation;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
 .heading-child-left div i{
     margin: 10px 10px;
    font-size: 26px;
@@ -79,7 +123,7 @@ nav p:hover{
 .heading-child-left div i:hover{
     transform: scale(1.1);
 }
-.heading-child-left div button{
+.heading-child-left  button{
     margin: 10px 10px;
     border: none;
     padding: 10px 13px;
@@ -109,10 +153,9 @@ nav p:hover{
 
 .about-section-right h1{
     font-weight: bolder;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    color: #212747;
+    font-size: 40px;
+    letter-spacing: 10px;
 }
 .about-section-right p{
     text-align: justify;
@@ -308,14 +351,6 @@ nav p:hover{
     color: green;
 }
 
-/* #contact-me{
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #212747;
-    margin-left: 20px;
-    margin-top: 10px;
-    text-transform: uppercase;
-} */
 
 .contact-form{
     display: flex;
@@ -420,8 +455,9 @@ footer div{
     gap: 20px;
 
 }
-footer div i{
+footer div a i{
     font-size: 20px;
+    color: #212747;
 }
 
 @media screen and (max-width:1388px) {
@@ -463,6 +499,9 @@ footer div i{
         width: 300px;
         margin-left: 10px;
     }
+    .contact{
+        margin: 10px 0px;
+    }
     .contact-details-service{
      width: 100%;   
     }
@@ -474,6 +513,11 @@ footer div i{
     }
     .contact-form{
         flex-direction: column;
+        width: 100%;
+        margin: 2px;
+    }
+    .contact-form h1{
+        text-align: center;
     }
 }
 
@@ -501,6 +545,61 @@ footer div i{
         justify-content: center;
         align-items: center;
     }
+    .contact-form input{
+        margin: 5px;
+    }
+    .heading-parent {
+        margin: 10px;
+    }
+
+    .heading-child-left h6{
+        font-weight: 300;
+        letter-spacing: 5px;
+        margin-top: -700px;
+        animation-name: h1-animation;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    .heading-child-left h3{
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-top: -700px;
+        animation-name: h1-animation;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        letter-spacing: 10px;
+        
+    }
+    .heading-child-left h1{
+        font-weight: 300;
+        text-transform: uppercase;
+       margin: 3px 0px;
+       font-weight: bolder;
+       color: #212747;
+       margin-bottom: 10px;
+       text-transform: uppercase;
+       letter-spacing: 10px;
+       font-size: 30px;
+        margin-top: 0px;
+        animation-name: none;
+       
+        
+    }
+    .social-media-link{
+        margin-top: 0px;
+        animation-name: none;
+       
+    }
+    
+    .hire-cv{
+        margin-top: 0px;
+        animation-name: none;
+        
+    }
+    
     
 }
 
@@ -536,6 +635,25 @@ footer div i{
     }
     .about-section div button{
         width: 300px;
+    }
+    .about-section-right h1{
+        text-align: center;
+        font-weight: bold;
+        color: #212747;
+        text-transform: uppercase;
+        font-size: 22px;
+        letter-spacing: 14px;
+        margin-bottom: 20px;
+    }
+    .about-section-right{
+        justify-content: center;
+        align-items: center;
+    }
+    .about-section-right h1 br{
+        display: none;
+    }
+    .about-section-right p{
+        text-align: center;
     }
 }
 
@@ -592,6 +710,7 @@ footer div i{
     .services-box-content-div p{
         width: 100%;
     }
+    
 
 }
 
@@ -652,6 +771,10 @@ footer div i{
         color: #212747;
         font-size: 20px;
     }
+    footer{
+        margin: 10px 0px;
+    }
+    
 
 }
 
@@ -661,5 +784,15 @@ footer div i{
     }
     from{
         transform: translateY(10px);
+    }
+}
+
+
+@keyframes h1-animation {
+    from{
+        margin-top: -700px;
+    }
+    to{
+        margin-top: 0px;
     }
 }
