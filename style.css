@@ -778,6 +778,20 @@ footer div a i{
 
 }
 
+
+@media screen and (max-width:508px) {
+   
+    nav a p{
+        color: #212747;
+        margin: 0px 6px;
+        cursor: pointer;
+        transition: 1s;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+}
+
 @keyframes service-box-i-tag{
     to{
         transform: translateY(-10px);
