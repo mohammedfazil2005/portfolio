@@ -323,10 +323,11 @@ nav p:hover{
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 17px;
+    font-size: 14px;
 }
 .projects-parents div img{
-    width: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 .projects-button-div{
